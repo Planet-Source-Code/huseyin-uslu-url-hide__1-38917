@@ -1,0 +1,89 @@
+
+	URLGizle - 1.00 - RaistlinTheWiz
+	================================
+
+
+ URL Gizle Nedir?
+ ----------------
+ 
+ URL Gizle, www linklerini basit bir yontemle gizlemek icin yazilmis bir programdir.
+ 
+ Bu gizleme 2 sekilde olur;
+
+ * IP adresini gizleme (http://www.raistlinthewiz.com un IP'sini gizleme)
+ * URL icinde domainden sonraki kismi gizleme (http://www.raistlinthewiz.com/deneme deki
+   deneme kismini gizleme)
+
+ IP Adresini Gizleme
+ -------------------
+
+ IP Adresi 3 sekilde gizlenir.
+ * IP Adresi, dword formatina cevrilebilinir
+ * IP Adresi, hex (16lik sayi sistemi) formatina cevrilebilinir
+ * IP Adresi, octal (8lik sayi sistemi) formatina cevrilebilinir
+
+ Simdi bunlari bir ornek ile aciklayalim;
+ 
+ Diyelimki http://www.linux.org'un IPsi olan 198.182.196.56 yi URL icinde gizlemek
+ istiyoruz. Yani web browserdan siteye www.linux.org veya 198.182.196.56 yazarak degilde
+ gizlenmis adresle girilmesini istiyoruz.
+
+ Programda URL icinde IP gizleme bolumune 198.182.196.56 adresini yaziyoruz. Daha sonra
+ diger seceneklere dokunmadan Islemi Yap butonuna basiyoruz. Program hesaplamalardan sonra
+ size DWord, Hex ve Octal formatinda erisim IPlerini verecektir.
+ www.linux.org 'un (198.182.196.56) nin sonuclari sunlardir:
+ 
+ DWord IP: http://3333866552/
+ Hex IP:   http://0xc6.0xb6.0xc4.0x38/
+ Octal IP: http://0306.0266.0304.070/
+
+ Web browserinizdan bu adresleri elle girerek www.linux.org'a ulasabilirsiniz. (Not: Su anda
+ bu gizlenmis IP formatlari sadece Internet Explorer'da calisir)
+
+ URL icinde domainden sonraki kismi gizleme
+ ----------------------------------------
+
+ Bu gizleme yontemi ile http://www.linux.org/news/bin/news URL'sinde ki
+ news/bin/news yazisini gizleyebilirsiniz.
+
+ Bunu yazmak icin ayni sekilde www.linux.org'un IP'sini girin daha sonra
+ URL kodlama aktif secenegini onaylayin. Sonra kodlanacak URL bolumune
+ news/bin/news yazisi yazin. (Not: news/bin/news yazisinin basinda / olmamasi
+ gerekir. Bu program tarafindan sonuclara otomatik olarak eklenir. Yani kodlanacak
+ URL bolumune /news/bin/news yazisini gizleyebilirsiniz. yazmak sonuclarda hataya neden
+ olur)
+ 
+ news/bin/news yazisin gizlenmis hali sudur:
+ %6E%65%77%73%2F%62%69%6E%2F%6E%65%77%73
+
+ Program bunu DWord,Hex,Octal formatli IPler ile birlestirip size sunar
+ Or: http://3333866552/%6E%65%77%73%2F%62%69%6E%2F%6E%65%77%73
+ 
+ Yani bir burda http://www.linux.org/news/bin/news adresini 
+ http://3333866552/%6E%65%77%73%2F%62%69%6E%2F%6E%65%77%73 olarak gizledik.
+ 
+ Programin diger bir ozelligi ise gizlenmis URL'lerin baska bir domaindenmis gibi gosterilmesini saglayabilir.
+ 
+ Yani siz daha onceden gizlemis oldugunuz http://www.linux.org/news/bin/news adresine soyle
+ bir sahte domain ekleyebilirsiniz! 
+ http://www.microsoft.com@3333866552/%6E%65%77%73%2F%62%69%6E%2F%6E%65%77%73
+ http://www.linux.org/news/bin/news'u sanki www.microsoft.com daki bir sayfaymis gibi gosterdik.
+ Bu basit bir tricktir. 
+ 
+ http://www.microsoft.com@3333866552/%6E%65%77%73%2F%62%69%6E%2F%6E%65%77%73
+ daki URL www.linux.org sunucusuna www.microsoft.com yazisini sifre olarak gonderir(URL lerde
+ @ den once gelen karakterler kullanici adi ve sifre olarak degerlendirilir.). 
+ www.linux.org sunucusu sifre kullanmaz ve www.microsoft.com yazisini pas gecer.
+ Tabi kullanicinin tarayicisinda anlamli tek yazi www.microsoft.com'dur. Bilgisayar konusunda fazla
+ bilgisi olmayanlar bu numarayi rahatca yer! :)
+ 
+ Not: Bu URL gizleme sistemi Internet Explorer ile calisir. URL Gizle'nin verdigi sonuclar Internet 
+ Explorer 5.5 (5.50.4134.0600) ile test edilmistir. Eski surumlerde calismayabilir.
+ Not2: Sistemin Internet Explorer 6.0 da da calismadigi duydum ama daha denemedim...
+
+ URL Gizleme Sistemi ile ilgili detayli bilgi icin http://www.olympos.org/def.asp?id=522 adresine bakabilirsiniz
+ RaistlinTheWiz
+ http://www.raistlinthewiz.com
+ raistlinthewiz@hotmail.com
+ 
+
